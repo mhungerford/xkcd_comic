@@ -9,6 +9,14 @@ static uint8_t max_images = 0;
 
 #define MAX(A,B) ((A>B) ? A : B)
 #define MIN(A,B) ((A<B) ? A : B)
+#define LEFT '1'
+
+// Necessary to modify frame directly, as layer_set_frame causes
+// layer_mark_dirty, which before each animation causes flicker
+typedef struct myLayer {
+  GRect bounds;
+  GRect frame;
+} myLayer;
 
 //Register stack pointer to print it (needs -ffixed-sp in CFLAGS also)
 register uint32_t sp __asm("sp");
@@ -33,18 +41,22 @@ static struct main_ui {
   BitmapLayer* bitmap_layer;
   BitmapLayer* bitmap_layer_old;
   Layer* animation_layer;
-  PropertyAnimation* prop_animation;
+  PropertyAnimation* prop_animation_slide_left;
+  PropertyAnimation* prop_animation_slide_up;
   AnimationImplementation* animation_implementation;
 
   GBitmap bitmap;
   GBitmap bitmap_old;
   upng_t* upng;
   uint8_t image_index;
+  uint8_t* animation_style_config;
 } ui = {
   .bitmap.addr = NULL,
   .bitmap.bounds = {{0},{0}},
   .image_index = 0,
-  .prop_animation = NULL,
+  .prop_animation_slide_left = NULL,
+  .prop_animation_slide_up = NULL,
+  .animation_style_config = NULL,
   .upng = NULL
 };
 
@@ -91,31 +103,29 @@ static bool gbitmap_from_bitmap(
 }
 
 static void init_animation(void) {
-  Layer *window_layer = window_get_root_layer(ui.window);
-  GRect bounds = layer_get_bounds(window_layer);
-
-  //GRect right_of_screen = {.origin={.x=143,.y=0},.size={.w=1,.h=168}};
-  
-    
-  //layer_get_frame(bitmap_layer_get_layer(ui.bitmap_layer)).size};//.w=144,.h=168}};
-
-  //layer_set_clips(bitmap_layer_get_layer(ui.bitmap_layer),true);
   GRect right_image_bounds = {.origin={.x=144,.y=0},.size={.w=144,.h=168}};
   GRect left_image_bounds = {.origin={.x=0,.y=0},.size={.w=144,.h=168}};
 
+  GRect top_image_bounds = {.origin={.x=0,.y=0},.size={.w=144,.h=168}};
+  GRect bottom_image_bounds = {.origin={.x=0,.y=168},.size={.w=144,.h=168}};
 
-  ui.prop_animation = property_animation_create_layer_frame( 
+  // Setup slide left animation
+  ui.prop_animation_slide_left = property_animation_create_layer_frame( 
     ui.animation_layer,
-    &right_image_bounds, &left_image_bounds);// &on_screen);//&bounds);
+    &right_image_bounds, &left_image_bounds);
 
-  //ui.animation_implementation = {
+  animation_set_duration((Animation*)ui.prop_animation_slide_left, 1000);
+  animation_set_curve((Animation*)ui.prop_animation_slide_left, 
+    AnimationCurveEaseInOut);
 
-  //animation_set_implementation((Animation*)ui.prop_animation, 
+  // Setup slide up animation
+  ui.prop_animation_slide_up = property_animation_create_layer_frame( 
+    ui.animation_layer,
+    &bottom_image_bounds, &top_image_bounds);
 
-
-  animation_set_duration((Animation*)ui.prop_animation, 1000);
-  animation_set_curve((Animation*)ui.prop_animation, AnimationCurveEaseInOut);
-  //animation_set_delay((Animation*)ui.prop_animation, 100);
+  animation_set_duration((Animation*)ui.prop_animation_slide_up, 1000);
+  animation_set_curve((Animation*)ui.prop_animation_slide_up, 
+    AnimationCurveEaseInOut);
 }
 
 
@@ -185,17 +195,40 @@ static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
 
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
   APP_LOG(APP_LOG_LEVEL_DEBUG, "down_click_handler");
-  if(ui.prop_animation && !animation_is_scheduled(ui.prop_animation)) {
+  if((ui.prop_animation_slide_left && 
+      !animation_is_scheduled(ui.prop_animation_slide_left))
+      || 
+      (ui.prop_animation_slide_up && 
+      !animation_is_scheduled(ui.prop_animation_slide_up))
+      ) {
     // Increment the index (wrap around if necessary)
     ui.image_index = (ui.image_index + 1) % max_images;
     load_png_resource(ui.image_index);
-    //bitmap_layer_set_bitmap(ui.bitmap_layer, &ui.bitmap);
-    //GRect right_of_screen = {.origin={.x=143,.y=0},.size={.w=144,.h=168}};
-    //((myLayer*)bitmap_layer_get_layer(ui.bitmap_layer))->bounds = right_of_screen;
-    //((myLayer*)bitmap_layer_get_layer(ui.bitmap_layer))->clips = false;
-    //layer_set_frame(bitmap_layer_get_layer(ui.bitmap_layer), right_of_screen);
-  
-    animation_schedule((Animation*)ui.prop_animation);
+    if (ui.animation_style_config[ui.image_index] == LEFT) {
+      GRect left_image_frame = {.origin={.x=-144,.y=0},.size={.w=144,.h=168}};
+      //layer_set_frame(bitmap_layer_get_layer(ui.bitmap_layer_old),left_image_frame);
+      ((myLayer*)bitmap_layer_get_layer(ui.bitmap_layer_old))->frame = 
+        left_image_frame;
+
+      GRect right_image_frame = {.origin={.x=0,.y=0},.size={.w=144,.h=168}};
+      //layer_set_frame(bitmap_layer_get_layer(ui.bitmap_layer),right_image_frame);
+      ((myLayer*)bitmap_layer_get_layer(ui.bitmap_layer))->frame = 
+        right_image_frame;
+
+      animation_schedule((Animation*)ui.prop_animation_slide_left);
+    } else {
+      GRect left_image_frame = {.origin={.x=0,.y=-168},.size={.w=144,.h=168}};
+      //layer_set_frame(bitmap_layer_get_layer(ui.bitmap_layer_old),left_image_frame);
+      ((myLayer*)bitmap_layer_get_layer(ui.bitmap_layer_old))->frame = 
+        left_image_frame;
+
+      GRect right_image_frame = {.origin={.x=0,.y=0},.size={.w=144,.h=168}};
+      //layer_set_frame(bitmap_layer_get_layer(ui.bitmap_layer),right_image_frame);
+      ((myLayer*)bitmap_layer_get_layer(ui.bitmap_layer))->frame = 
+        right_image_frame;
+
+      animation_schedule((Animation*)ui.prop_animation_slide_up);
+    }
   }
 }
 
@@ -230,27 +263,13 @@ static void window_load(Window *window) {
   layer_add_child(ui.animation_layer, bitmap_layer_get_layer(ui.bitmap_layer));
   layer_add_child(ui.animation_layer, bitmap_layer_get_layer(ui.bitmap_layer_old));
 
-  GRect left_image_frame = {.origin={.x=-144,.y=0},.size={.w=144,.h=168}};
-  layer_set_frame(bitmap_layer_get_layer(ui.bitmap_layer_old),left_image_frame);
-
-  GRect right_image_frame = {.origin={.x=0,.y=0},.size={.w=144,.h=168}};
-  layer_set_frame(bitmap_layer_get_layer(ui.bitmap_layer),right_image_frame);
-
-
-  layer_insert_below_sibling(
-    bitmap_layer_get_layer(ui.bitmap_layer_old),
-    bitmap_layer_get_layer(ui.bitmap_layer));
-
-
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "added children");
-
   load_png_resource(ui.image_index);
   bitmap_layer_set_bitmap(ui.bitmap_layer, &ui.bitmap);
   bitmap_layer_set_bitmap(ui.bitmap_layer_old, &ui.bitmap_old);
   //layer_mark_dirty(bitmap_layer_get_layer(ui.bitmap_layer));
 
   // Animation
-  if (ui.prop_animation == NULL) {
+  if (ui.prop_animation_slide_left == NULL) {
     APP_LOG(APP_LOG_LEVEL_DEBUG, "init animation");
     init_animation();
   }
@@ -259,24 +278,35 @@ static void window_load(Window *window) {
 }
 
 static void window_unload(Window *window) {
-  if (ui.prop_animation != NULL) {
-    property_animation_destroy(ui.prop_animation);
+  if (ui.prop_animation_slide_left != NULL) {
+    property_animation_destroy(ui.prop_animation_slide_left);
+  }
+  if (ui.prop_animation_slide_up != NULL) {
+    property_animation_destroy(ui.prop_animation_slide_up);
   }
 }
 
 static void init(void) {
+  //Load the resource animation configuration file
+  ResHandle animation_style_config_handle = 
+    resource_get_handle(RESOURCE_ID_ANIMATION_CONFIG);
+  int animation_style_config_bytes = resource_size(animation_style_config_handle);
+  ui.animation_style_config = (uint8_t*)malloc(animation_style_config_bytes);
+  resource_load(animation_style_config_handle, 
+    ui.animation_style_config, animation_style_config_bytes);
+
   //Discover how many images from base index
   while (resource_get_handle(RESOURCE_ID_IMAGE_1 + max_images)) {
     max_images++;
   }
-  
+
 //APP_LOG(APP_LOG_LEVEL_DEBUG, "Stack Used:%ld SP:%p", bsp - sp, sp);
 
   light_enable(true);
 
   ui.window = window_create();
   window_set_fullscreen(ui.window, true);
-  window_set_background_color(ui.window, GColorClear);
+  //window_set_background_color(ui.window, GColorClear);
   window_set_click_config_provider(ui.window, click_config_provider);
   window_set_window_handlers(ui.window, (WindowHandlers) {
     .load = window_load,

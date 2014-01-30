@@ -15,6 +15,11 @@
     "media": [
     {
       "type": "raw",
+      "name": "ANIMATION_CONFIG",
+      "file": "animation_style_config.txt"
+    },
+    {
+      "type": "raw",
       "name": "IMAGE_1",
       "file": "xkcd_cover.png"
     },
