@@ -152,6 +152,11 @@
       "type": "raw",
       "name": "IMAGE_28",
       "file": "rtl.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_29",
+      "file": "techno.png"
     }
     ]
   }
