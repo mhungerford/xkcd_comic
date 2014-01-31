@@ -156,17 +156,42 @@
     {
       "type": "raw",
       "name": "IMAGE_28",
-      "file": "alternate_universe.png"
+      "file": "techno.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_29",
-      "file": "rtl.png"
+      "file": "00-goto.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_30",
-      "file": "techno.png"
+      "file": "01-goto.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_31",
+      "file": "03-goto.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_32",
+      "file": "curiosity.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_33",
+      "file": "00-everything.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_34",
+      "file": "01-everything.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_35",
+      "file": "02-everything.png"
     }
     ]
   }
