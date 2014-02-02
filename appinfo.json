@@ -212,7 +212,42 @@
       "type": "raw",
       "name": "IMAGE_39",
       "file": "03-metallurgy.png"
-    }
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_40",
+      "file": "00-the_general_problem.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_41",
+      "file": "01-the_general_problem.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_42",
+      "file": "02-the_general_problem.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_43",
+      "file": "00-exploits_of_a_mom.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_44",
+      "file": "01-exploits_of_a_mom.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_45",
+      "file": "02-exploits_of_a_mom.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_46",
+      "file": "03-exploits_of_a_mom.png"
+    } 
     ]
   }
 }
