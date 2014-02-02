@@ -13,6 +13,7 @@ def options(ctx):
 
 def configure(ctx):
     ctx.load('pebble_sdk')
+    ctx.exec_command('./gen_animation_style_config.sh')
 
 def build(ctx):
     ctx.load('pebble_sdk')

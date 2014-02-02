@@ -685,7 +685,6 @@ static upng_error uz_inflate_data(upng_t* upng, unsigned char* out, unsigned lon
 			inflate_uncompressed(upng, out, outsize, &in[inpos], &bp, &pos, insize);	/*no compression */
 		} else {
 #ifndef TINFL			
-      APP_LOG(APP_LOG_LEVEL_DEBUG,"png btype:%d",btype);
       inflate_huffman(upng, out, outsize, &in[inpos], &bp, &pos, insize, btype);	/*compression, btype 01 or 10 */
 #else
       tinfl_decompressor inflator;

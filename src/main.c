@@ -84,9 +84,11 @@ static bool gbitmap_from_bitmap(
   gbitmap->row_size_bytes = ((width + 31) / 32 ) * 4;
   //Allocate new gbitmap array
   gbitmap->addr = malloc(height * gbitmap->row_size_bytes); 
+  if (gbitmap->addr == NULL) {
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "malloc gbitmap->addr failed");
+    app_exit(1);
+  }
 
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "copy rows from:%p to:%p",
-    bitmap_buffer,gbitmap->addr);
   for(int y = 0; y < height; y++) {
     memcpy(
       &(((uint8_t*)gbitmap->addr)[y * gbitmap->row_size_bytes]), 
@@ -133,21 +135,15 @@ static bool load_png_resource(int index) {
   ResHandle rHdl = resource_get_handle(RESOURCE_ID_IMAGE_1 + ui.image_index);
   int png_raw_size = resource_size(rHdl);
     
+  // Free the old bitmap here to have the memory available for decompression
   if (ui.bitmap_old.addr) {
     free(ui.bitmap_old.addr);
   }
-    
-  
-  if (ui.upng) {
-    upng_free(ui.upng);
-    ui.upng = NULL;
-  }
-
-  psleep(1); // Avoid watchdog kill
   
   uint8_t* png_raw_buffer = malloc(png_raw_size); //freed by upng impl
   if (png_raw_buffer == NULL) {
     APP_LOG(APP_LOG_LEVEL_DEBUG, "malloc png resource buffer failed");
+    app_exit(1);
   }
   resource_load(rHdl, png_raw_buffer, png_raw_size);
   ui.upng = upng_new_from_bytes(png_raw_buffer, png_raw_size);
@@ -176,7 +172,6 @@ static bool load_png_resource(int index) {
   upng_free(ui.upng);
   ui.upng = NULL;
 
-  psleep(1); // Avoid watchdog kill  
   return true;
 }
 
@@ -185,16 +180,15 @@ static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
   // Decrement the index (wrap around if negative)
   ui.image_index = ((ui.image_index - 1) < 0)? (max_images - 1) : (ui.image_index - 1);
   load_png_resource(ui.image_index);
-  bitmap_layer_set_bitmap(ui.bitmap_layer, &ui.bitmap);
-  bitmap_layer_set_bitmap(ui.bitmap_layer_old, &ui.bitmap_old);
-  layer_mark_dirty(bitmap_layer_get_layer(ui.bitmap_layer));
+  GRect window_bounds = layer_get_bounds(window_get_root_layer(ui.window));
+  layer_set_bounds(bitmap_layer_get_layer(ui.bitmap_layer), window_bounds);
+  layer_mark_dirty(ui.animation_layer);
 }
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
 }
 
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "down_click_handler");
   if((ui.prop_animation_slide_left && 
       !animation_is_scheduled(ui.prop_animation_slide_left))
       || 
@@ -259,9 +253,9 @@ static void window_load(Window *window) {
   ui.bitmap_layer = bitmap_layer_create(bounds);
   //layer_set_clips(bitmap_layer_get_layer(ui.bitmap_layer), false);
 
-
-  layer_add_child(ui.animation_layer, bitmap_layer_get_layer(ui.bitmap_layer));
+  //add old first, so newer image will be on top for back button drawing
   layer_add_child(ui.animation_layer, bitmap_layer_get_layer(ui.bitmap_layer_old));
+  layer_add_child(ui.animation_layer, bitmap_layer_get_layer(ui.bitmap_layer));
 
   load_png_resource(ui.image_index);
   bitmap_layer_set_bitmap(ui.bitmap_layer, &ui.bitmap);
@@ -292,6 +286,11 @@ static void init(void) {
     resource_get_handle(RESOURCE_ID_ANIMATION_CONFIG);
   int animation_style_config_bytes = resource_size(animation_style_config_handle);
   ui.animation_style_config = (uint8_t*)malloc(animation_style_config_bytes);
+  if (ui.animation_style_config == NULL) {
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "animation_style_config malloc failed"); 
+    app_exit(1);
+  }
+  
   resource_load(animation_style_config_handle, 
     ui.animation_style_config, animation_style_config_bytes);
 
@@ -306,15 +305,16 @@ static void init(void) {
 
   ui.window = window_create();
   window_set_fullscreen(ui.window, true);
-  //window_set_background_color(ui.window, GColorClear);
+  //window_set_background_color(ui.window, GColorClear);//Allows compositing
   window_set_click_config_provider(ui.window, click_config_provider);
   window_set_window_handlers(ui.window, (WindowHandlers) {
     .load = window_load,
     .unload = window_unload,
   });
   const bool animated = false;
-  window_stack_push(ui.window, animated);
+
   APP_LOG(APP_LOG_LEVEL_DEBUG, "window push.");
+  window_stack_push(ui.window, animated);
 }
 
 static void deinit(void) {
