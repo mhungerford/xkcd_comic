@@ -247,6 +247,36 @@
       "type": "raw",
       "name": "IMAGE_46",
       "file": "03-exploits_of_a_mom.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_47",
+      "file": "00-security.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_48",
+      "file": "01-security.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_49",
+      "file": "00-join_myspace.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_50",
+      "file": "01-join_myspace.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_51",
+      "file": "02-join_myspace.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_52",
+      "file": "03-join_myspace.png"
     } 
     ]
   }
