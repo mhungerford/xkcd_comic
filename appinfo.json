@@ -277,7 +277,42 @@
       "type": "raw",
       "name": "IMAGE_52",
       "file": "03-join_myspace.png"
-    } 
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_53",
+      "file": "haskell.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_54",
+      "file": "syllable_planning.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_55",
+      "file": "00-how_it_works.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_56",
+      "file": "01-how_it_works.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_57",
+      "file": "00-michael_phelps.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_58",
+      "file": "01-michael_phelps.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_59",
+      "file": "03-michael_phelps.png"
+    }
     ]
   }
 }
