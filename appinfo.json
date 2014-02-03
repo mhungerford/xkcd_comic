@@ -322,6 +322,11 @@
       "type": "raw",
       "name": "IMAGE_61",
       "file": "03-philosophy.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_62",
+      "file": "ohm.png"
     }
     ]
   }
