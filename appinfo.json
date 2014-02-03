@@ -277,6 +277,31 @@
       "type": "raw",
       "name": "IMAGE_52",
       "file": "03-join_myspace.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_53",
+      "file": "02-accident.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_54",
+      "file": "03-accident.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_55",
+      "file": "00-hamster_ball.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_56",
+      "file": "01-hamster_ball.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_57",
+      "file": "05-hamster_ball.png"
     } 
     ]
   }
