@@ -146,201 +146,196 @@
     {
       "type": "raw",
       "name": "IMAGE_26",
-      "file": "03-broomstick.png"
+      "file": "02-broomstick.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_27",
-      "file": "00-shoes.png"
+      "file": "03-broomstick.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_28",
-      "file": "01-shoes.png"
+      "file": "00-shoes.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_29",
-      "file": "02-shoes.png"
+      "file": "01-shoes.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_30",
-      "file": "03-shoes.png"
+      "file": "02-shoes.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_31",
-      "file": "00-skifree.png"
+      "file": "03-shoes.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_32",
-      "file": "01-skifree.png"
+      "file": "00-skifree.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_33",
-      "file": "02-skifree.png"
+      "file": "01-skifree.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_34",
-      "file": "curiosity.png"
+      "file": "02-skifree.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_35",
-      "file": "techno.png"
+      "file": "curiosity.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_36",
-      "file": "00-metallurgy.png"
+      "file": "techno.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_37",
-      "file": "01-metallurgy.png"
+      "file": "00-metallurgy.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_38",
-      "file": "02-metallurgy.png"
+      "file": "01-metallurgy.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_39",
-      "file": "03-metallurgy.png"
+      "file": "02-metallurgy.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_40",
-      "file": "00-exploits_of_a_mom.png"
+      "file": "03-metallurgy.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_41",
-      "file": "01-exploits_of_a_mom.png"
+      "file": "00-exploits_of_a_mom.png"
     },
     {
       "type": "raw",
       "name": "IMAGE_42",
+      "file": "01-exploits_of_a_mom.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_43",
       "file": "02-exploits_of_a_mom.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_43",
+      "name": "IMAGE_44",
       "file": "03-exploits_of_a_mom.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_44",
+      "name": "IMAGE_45",
       "file": "00-join_myspace.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_45",
+      "name": "IMAGE_46",
       "file": "01-join_myspace.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_46",
+      "name": "IMAGE_47",
       "file": "02-join_myspace.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_47",
+      "name": "IMAGE_48",
       "file": "03-join_myspace.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_48",
+      "name": "IMAGE_49",
       "file": "02-accident.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_49",
+      "name": "IMAGE_50",
       "file": "03-accident.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_50",
+      "name": "IMAGE_51",
       "file": "00-hamster_ball.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_51",
+      "name": "IMAGE_52",
       "file": "01-hamster_ball.png"
     }, 
     {
       "type": "raw",
-      "name": "IMAGE_52",
+      "name": "IMAGE_53",
       "file": "05-hamster_ball.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_53",
-      "file": "haskell.png"
-    },
-    {
-      "type": "raw",
       "name": "IMAGE_54",
-      "file": "syllable_planning.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_55",
       "file": "00-how_it_works.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_56",
+      "name": "IMAGE_55",
       "file": "01-how_it_works.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_57",
+      "name": "IMAGE_56",
       "file": "00-michael_phelps.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_58",
+      "name": "IMAGE_57",
       "file": "01-michael_phelps.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_59",
+      "name": "IMAGE_58",
       "file": "03-michael_phelps.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_60",
+      "name": "IMAGE_59",
       "file": "02-philosophy.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_61",
+      "name": "IMAGE_60",
       "file": "03-philosophy.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_62",
+      "name": "IMAGE_61",
       "file": "ohm.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_63",
+      "name": "IMAGE_62",
       "file": "13-shark.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_64",
+      "name": "IMAGE_63",
       "file": "14-shark.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_65",
+      "name": "IMAGE_64",
       "file": "15-shark.png"
     }
     ]
