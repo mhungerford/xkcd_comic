@@ -1,7 +1,7 @@
 {
   "uuid": "5bfacb04-9449-461e-b3e6-7637d490ed53",
-  "shortName": "xkcd set 0",
-  "longName": "xkcd set 0 png viewer",
+  "shortName": "xkcd comic",
+  "longName": "xkcd comic png viewer",
   "companyName": "nicetux",
   "versionCode": 1,
   "versionLabel": "1.0.0",
@@ -17,6 +17,12 @@
       "type": "raw",
       "name": "ANIMATION_CONFIG",
       "file": "animation_style_config.txt"
+    },
+    {
+      "menuIcon": true,
+      "type": "png",
+      "name": "IMAGE_ICON",
+      "file": "xkcd_icon_24_28.png"
     },
     {
       "type": "raw",
