@@ -18,6 +18,10 @@ typedef struct myLayer {
   GRect frame;
 } myLayer;
 
+enum {
+    RESUME_KEY = 0
+};
+
 //Register stack pointer to print it (needs -ffixed-sp in CFLAGS also)
 register uint32_t sp __asm("sp");
 static uint32_t bsp = 0x2001a26c; //stack grows downward from this
@@ -190,10 +194,10 @@ static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
 
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
   if((ui.prop_animation_slide_left && 
-      !animation_is_scheduled(ui.prop_animation_slide_left))
+      !animation_is_scheduled((Animation*)ui.prop_animation_slide_left))
       || 
       (ui.prop_animation_slide_up && 
-      !animation_is_scheduled(ui.prop_animation_slide_up))
+      !animation_is_scheduled((Animation*)ui.prop_animation_slide_up))
       ) {
     // Increment the index (wrap around if necessary)
     ui.image_index = (ui.image_index + 1) % max_images;
@@ -299,6 +303,11 @@ static void init(void) {
     max_images++;
   }
 
+  //Check if we can resume where we left off
+  if(persist_exists(RESUME_KEY)){
+    ui.image_index = persist_read_int(RESUME_KEY);
+  }
+
 //APP_LOG(APP_LOG_LEVEL_DEBUG, "Stack Used:%ld SP:%p", bsp - sp, sp);
 
   light_enable(true);
@@ -318,6 +327,7 @@ static void init(void) {
 }
 
 static void deinit(void) {
+  persist_write_int(RESUME_KEY,ui.image_index);
   window_destroy(ui.window);
   if (ui.upng) upng_free(ui.upng);
 }

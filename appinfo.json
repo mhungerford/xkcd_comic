@@ -292,57 +292,107 @@
     {
       "type": "raw",
       "name": "IMAGE_54",
-      "file": "00-how_it_works.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_55",
-      "file": "01-how_it_works.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_56",
       "file": "00-michael_phelps.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_57",
+      "name": "IMAGE_55",
       "file": "01-michael_phelps.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_58",
+      "name": "IMAGE_56",
       "file": "03-michael_phelps.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_59",
+      "name": "IMAGE_57",
       "file": "02-philosophy.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_60",
+      "name": "IMAGE_58",
       "file": "03-philosophy.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_61",
+      "name": "IMAGE_59",
       "file": "ohm.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_62",
+      "name": "IMAGE_60",
       "file": "13-shark.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_63",
+      "name": "IMAGE_61",
       "file": "14-shark.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_64",
+      "name": "IMAGE_62",
       "file": "15-shark.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_63",
+      "file": "00-sharks.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_64",
+      "file": "02-sharks.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_65",
+      "file": "03-sharks.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_66",
+      "file": "00-10_day_forecast.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_67",
+      "file": "02-10_day_forecast.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_68",
+      "file": "03-10_day_forecast.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_69",
+      "file": "00-python.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_70",
+      "file": "01-python.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_71",
+      "file": "02-python.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_72",
+      "file": "03-python.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_73",
+      "file": "plugin.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_74",
+      "file": "plugin.png"
     }
     ]
   }
