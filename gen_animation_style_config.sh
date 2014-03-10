@@ -3,7 +3,7 @@ IFS=$'\n'
 echo -n "" > resources/animation_style_config.txt
 FIRST_FRAME=true
 LASTFILE="junk_text"
-IMAGES=( $(grep 'file' appinfo.json) )
+IMAGES=( $(awk '/IMAGE_[0-9]/{getline; print}' appinfo.json) )
 for IMAGE in ${IMAGES[@]}; do
   if [[ $IMAGE =~ [0-9]-.*\.png ]]; then
     if ($FIRST_FRAME); then

@@ -37,357 +37,357 @@
     {
       "type": "raw",
       "name": "IMAGE_3",
-      "file": "00-tar.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_4",
-      "file": "01-tar.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_5",
-      "file": "03-tar.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_6",
-      "file": "00-goto.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_7",
-      "file": "01-goto.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_8",
-      "file": "03-goto.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_9",
-      "file": "00-everything.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_10",
-      "file": "01-everything.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_11",
-      "file": "02-everything.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_12",
-      "file": "relativity.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_13",
-      "file": "caption_cats.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_14",
-      "file": "pointers.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_15",
-      "file": "00-wake_up_sheeple.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_16",
-      "file": "01-wake_up_sheeple.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_17",
-      "file": "03-wake_up_sheeple.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_18",
-      "file": "05-wake_up_sheeple.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_19",
-      "file": "duty_calls.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_20",
-      "file": "00-a-minus-minus.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_21",
-      "file": "01-a-minus-minus.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_22",
-      "file": "02-a-minus-minus.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_23",
-      "file": "03-a-minus-minus.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_24",
-      "file": "00-broomstick.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_25",
-      "file": "01-broomstick.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_26",
-      "file": "02-broomstick.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_27",
-      "file": "03-broomstick.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_28",
-      "file": "00-shoes.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_29",
-      "file": "01-shoes.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_30",
-      "file": "02-shoes.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_31",
-      "file": "03-shoes.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_32",
-      "file": "00-skifree.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_33",
-      "file": "01-skifree.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_34",
-      "file": "02-skifree.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_35",
-      "file": "curiosity.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_36",
-      "file": "techno.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_37",
-      "file": "00-metallurgy.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_38",
-      "file": "01-metallurgy.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_39",
-      "file": "02-metallurgy.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_40",
-      "file": "03-metallurgy.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_41",
-      "file": "00-exploits_of_a_mom.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_42",
-      "file": "01-exploits_of_a_mom.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_43",
-      "file": "02-exploits_of_a_mom.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_44",
-      "file": "03-exploits_of_a_mom.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_45",
-      "file": "00-join_myspace.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_46",
-      "file": "01-join_myspace.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_47",
-      "file": "02-join_myspace.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_48",
-      "file": "03-join_myspace.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_49",
-      "file": "02-accident.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_50",
-      "file": "03-accident.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_51",
-      "file": "00-hamster_ball.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_52",
-      "file": "01-hamster_ball.png"
-    }, 
-    {
-      "type": "raw",
-      "name": "IMAGE_53",
-      "file": "05-hamster_ball.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_54",
-      "file": "00-michael_phelps.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_55",
-      "file": "01-michael_phelps.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_56",
-      "file": "03-michael_phelps.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_57",
-      "file": "02-philosophy.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_58",
-      "file": "03-philosophy.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_59",
-      "file": "ohm.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_60",
-      "file": "13-shark.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_61",
-      "file": "14-shark.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_62",
-      "file": "15-shark.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_63",
-      "file": "00-sharks.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_64",
-      "file": "02-sharks.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_65",
-      "file": "03-sharks.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_66",
-      "file": "00-10_day_forecast.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_67",
-      "file": "02-10_day_forecast.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_68",
-      "file": "03-10_day_forecast.png"
-    },
-    {
-      "type": "raw",
-      "name": "IMAGE_69",
       "file": "00-python.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_70",
+      "name": "IMAGE_4",
       "file": "01-python.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_71",
+      "name": "IMAGE_5",
       "file": "02-python.png"
     },
     {
       "type": "raw",
-      "name": "IMAGE_72",
+      "name": "IMAGE_6",
       "file": "03-python.png"
     },
     {
       "type": "raw",
+      "name": "IMAGE_7",
+      "file": "00-tar.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_8",
+      "file": "01-tar.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_9",
+      "file": "03-tar.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_10",
+      "file": "00-goto.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_11",
+      "file": "01-goto.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_12",
+      "file": "03-goto.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_13",
+      "file": "00-everything.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_14",
+      "file": "01-everything.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_15",
+      "file": "02-everything.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_16",
+      "file": "relativity.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_17",
+      "file": "caption_cats.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_18",
+      "file": "pointers.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_19",
+      "file": "00-wake_up_sheeple.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_20",
+      "file": "01-wake_up_sheeple.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_21",
+      "file": "03-wake_up_sheeple.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_22",
+      "file": "05-wake_up_sheeple.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_23",
+      "file": "duty_calls.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_24",
+      "file": "00-a-minus-minus.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_25",
+      "file": "01-a-minus-minus.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_26",
+      "file": "02-a-minus-minus.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_27",
+      "file": "03-a-minus-minus.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_28",
+      "file": "00-broomstick.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_29",
+      "file": "01-broomstick.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_30",
+      "file": "02-broomstick.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_31",
+      "file": "03-broomstick.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_32",
+      "file": "00-shoes.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_33",
+      "file": "01-shoes.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_34",
+      "file": "02-shoes.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_35",
+      "file": "03-shoes.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_36",
+      "file": "00-skifree.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_37",
+      "file": "01-skifree.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_38",
+      "file": "02-skifree.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_39",
+      "file": "curiosity.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_40",
+      "file": "techno.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_41",
+      "file": "00-metallurgy.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_42",
+      "file": "01-metallurgy.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_43",
+      "file": "02-metallurgy.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_44",
+      "file": "03-metallurgy.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_45",
+      "file": "00-exploits_of_a_mom.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_46",
+      "file": "01-exploits_of_a_mom.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_47",
+      "file": "02-exploits_of_a_mom.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_48",
+      "file": "03-exploits_of_a_mom.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_49",
+      "file": "00-join_myspace.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_50",
+      "file": "01-join_myspace.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_51",
+      "file": "02-join_myspace.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_52",
+      "file": "03-join_myspace.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_53",
+      "file": "02-accident.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_54",
+      "file": "03-accident.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_55",
+      "file": "00-hamster_ball.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_56",
+      "file": "01-hamster_ball.png"
+    }, 
+    {
+      "type": "raw",
+      "name": "IMAGE_57",
+      "file": "05-hamster_ball.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_58",
+      "file": "00-michael_phelps.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_59",
+      "file": "01-michael_phelps.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_60",
+      "file": "03-michael_phelps.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_61",
+      "file": "02-philosophy.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_62",
+      "file": "03-philosophy.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_63",
+      "file": "ohm.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_64",
+      "file": "13-shark.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_65",
+      "file": "14-shark.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_66",
+      "file": "15-shark.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_67",
+      "file": "00-sharks.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_68",
+      "file": "02-sharks.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_69",
+      "file": "03-sharks.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_70",
+      "file": "00-10_day_forecast.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_71",
+      "file": "02-10_day_forecast.png"
+    },
+    {
+      "type": "raw",
+      "name": "IMAGE_72",
+      "file": "03-10_day_forecast.png"
+    },
+    {
+      "type": "raw",
       "name": "IMAGE_73",
-      "file": "plugin.png"
+      "file": "faust_eula.png"
     },
     {
       "type": "raw",
