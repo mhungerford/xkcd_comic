@@ -181,8 +181,8 @@ static bool load_png_resource(int index) {
 
 
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
-  // Decrement the index (wrap around if negative)
-  ui.image_index = ((ui.image_index - 1) < 0)? (max_images - 1) : (ui.image_index - 1);
+  // Decrement the index (don't wrap, confused users)
+  ui.image_index = ((ui.image_index - 1) < 0)? (0) : (ui.image_index - 1);
   load_png_resource(ui.image_index);
   GRect window_bounds = layer_get_bounds(window_get_root_layer(ui.window));
   layer_set_bounds(bitmap_layer_get_layer(ui.bitmap_layer), window_bounds);
